@@ -109,7 +109,7 @@ var MerryGoRound = new Class({
     });
     this.inner_element.setStyles({
       'width' : total_height,
-      'overflow' : 'auto'
+      'overflow' : 'hidden'
     });
   },
 
