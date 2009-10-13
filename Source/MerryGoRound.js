@@ -11,6 +11,7 @@ requires:
 - core:1.2.3/Fx.Tween
 - core:1.2.3/String
 - core:1.2.3/Array
+description: A fully-automated, flexible, customizable carousel class for Mootools.
 authors: 
 - 3n
 ...
@@ -20,7 +21,6 @@ var MerryGoRound = new Class({
   Implements: [Events, Options],
   options: {
     selector       : '*',
-    starting_index : 0,
     cycle          : false,
     per_page       : 'auto',
     page_controls  : false,
@@ -73,12 +73,12 @@ var MerryGoRound = new Class({
   initialize: function(elem, options){
     this.setOptions(options);
     
-    var method = elem.getParent() ? 'wraps' : 'grab';
-    this.inner_element = elem;
+    this.inner_element = $(elem);
+    var method = this.inner_element.getParent() ? 'wraps' : 'grab';
     this.element = new Element(this.options.wrapper_tag, this.options.wrapper_options)[method](this.inner_element);
 
     this.riders        = this.element.getFirst().getChildren(this.options.selector);
-    this.current_index = this.options.starting_index;
+    this.current_index = 0;
     
     if (this.riders.length === 0) return;
 
