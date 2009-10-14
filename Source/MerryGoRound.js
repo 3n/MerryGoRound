@@ -85,10 +85,10 @@ var MerryGoRound = new Class({
     this.scroll = new Fx.Tween(this.inner_element, this.options.fx_options);
 
     this.setup_styles();
-    this.setup_pages();
-    if (this.options.page_controls) this.setup_page_controls();
+    this.setup_pages();    
     
     if (this.pages.length > 1){
+      if (this.options.page_controls) this.setup_page_controls();
       this.inject_buttons();
       this.add_events();
       this.fireEvent('pageShown', [0, this]);          
