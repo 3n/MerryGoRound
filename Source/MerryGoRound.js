@@ -121,7 +121,7 @@ var MerryGoRound = new Class({
 
       this.pages.include(this.riders[0]);
       
-      for (var i = 1; i < this.riders.length; i++){
+      for (var i = 1, ii = this.riders.length; i < ii; i++){
         var rider_left  = this.riders[i].getPosition(this.inner_element).x;
         var rider_width = this.riders[i].getWidth() 
                           + this.riders[i].getStyle('margin-left').toInt() 
@@ -137,7 +137,7 @@ var MerryGoRound = new Class({
     } else if (this.options.per_page === 1){
       this.pages = this.riders;
     } else {
-      for (i = 0; i < this.riders.length; i++){
+      for (var i = 1, ii = this.riders.length; i < ii; i++){
         if (i % this.options.per_page === 0) this.pages.include(this.riders[i]);
       }
     } 
