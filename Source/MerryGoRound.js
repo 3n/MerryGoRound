@@ -4,13 +4,14 @@ provides:
 - MerryGoRound
 license: MIT-style
 requires: 
-- core:1.2.3/Class.Extras
-- core:1.2.3/Element.Event
-- core:1.2.3/Element.Style
-- core:1.2.3/Element.Dimensions
-- core:1.2.3/Fx.Tween
-- core:1.2.3/String
-- core:1.2.3/Array
+  core/1.2.3: 
+  - Class.Extras
+  - Element.Event
+  - Element.Style
+  - Element.Dimensions
+  - Fx.Tween
+  - String
+  - Array
 description: A fully-automated, flexible, customizable carousel class for Mootools.
 authors: 
 - 3n
