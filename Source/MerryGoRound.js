@@ -100,16 +100,18 @@ var MerryGoRound = new Class({
   
   setup_styles: function(){
     this.element.setStyles({
-      'height' : this.options.wrapper_height || this.riders[0].getHeight(),
-      'width'  : this.options.wrapper_width  || this.inner_element.getWidth()
+      'height'   : this.options.wrapper_height || this.riders[0].getHeight(),
+      'width'    : this.options.wrapper_width  || this.inner_element.getWidth(),
+      'overflow' : 'hidden'
     });
     
-    var total_height = 0;
+    var total_width = 0;
     this.riders.each(function(x){ 
-      total_height += x.getWidth() + x.getStyle('margin-left').toInt() + x.getStyle('margin-right').toInt(); 
+      x.setStyle('float','left');
+      total_width += x.getWidth() + x.getStyle('margin-left').toInt() + x.getStyle('margin-right').toInt(); 
     });
     this.inner_element.setStyles({
-      'width' : total_height,
+      'width' : total_width,
       'overflow' : 'hidden'
     });
   },
@@ -182,10 +184,10 @@ var MerryGoRound = new Class({
   },
 
   next: function(){  
-    this.scroll_to_page(++this.current_index);
+    this.scroll_to_page(this.current_index + 1);
   },
   previous: function(){
-    this.scroll_to_page(--this.current_index);
+    this.scroll_to_page(this.current_index - 1);
   },
   
   _hide_or_show_buttons: function(page_index){
