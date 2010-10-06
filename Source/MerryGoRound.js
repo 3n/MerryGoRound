@@ -1,20 +1,25 @@
 /*
 --- 
-provides: 
-- MerryGoRound
-license: MIT-style
-requires: 
-  core/1.2.3: 
-  - Class.Extras
-  - Element.Event
-  - Element.Style
-  - Element.Dimensions
-  - Fx.Tween
-  - String
-  - Array
+script: MerryGoRound.js
+name: MerryGoRound
 description: A fully-automated, flexible, customizable carousel class for Mootools.
+
+provides: [MerryGoRound]
+
+license: MIT-style
+
+requires: 
+  - Core/Class.Extras
+  - Core/Element.Event
+  - Core/Element.Style
+  - Core/Element.Dimensions
+  - Core/Fx.Tween
+  - Core/String
+  - Core/Array
+  
 authors: 
 - 3n
+
 ...
 */
 
