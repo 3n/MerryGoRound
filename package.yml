@@ -1,9 +1,12 @@
 --- 
-name: MerryGoRound
-category: Interface
+name: "MerryGoRound"
+description: "A fully-automated, flexible, customizable carousel class for Mootools."
+category: "Interface"
 tags: 
-- carousel
-current: 0.1
-author: 3n
-contact: ian.collins@gmail.com
-website: http://www.iancollins.me
+  - "carousel"
+current: "0.1"
+author: "3n"
+contact: "ian.collins@gmail.com"
+website: "http://www.iancollins.me"
+sources:
+  - "Source/MerryGoRound.js"
